@@ -1,5 +1,4 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
+# Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
@@ -19,7 +18,7 @@
   # Define on which hard drive you want to install Grub.
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
-  networking.hostName = "vm-nixos"; # Define your hostname.
+  networking.hostName = "ln"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Set your time zone.
@@ -52,7 +51,7 @@
 
 
   # Configure keymap in X11
-  services.xserver.layout = "us";
+  services.xserver.layout = "de";
   # services.xserver.xkbOptions = "eurosign:e";
 
   # Enable CUPS to print documents.
@@ -75,7 +74,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nano
-    wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
